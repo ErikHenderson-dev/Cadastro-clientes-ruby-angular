@@ -1,0 +1,98 @@
+$white: #fff;
+$gray-100: #f1f2f6;
+$gray-200: #dfe4ea;
+$gray-300: #ced6e0;
+$gray-400: #a4b0be;
+$gray-500: #747d8c;
+$gray-600: #57606f;
+$gray-700: #464b53;
+$gray-800: #3a3e45;
+$gray-900: #2f3542;
+$black: #000;
+
+$theme-colors: (
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300
+);
+
+$blue: #4c87ff;
+$green: #88d535;
+
+$primary: $blue;
+$secondary: $green;
+$dark: $gray-600;
+
+$yiq-contrasted-threshold: 172;
+
+$spacer: 1rem;
+$spacers: (
+  6: ($spacer * 3.5)
+);
+
+$body-color: $gray-600;
+
+$link-hover-decoration: none;
+
+$grid-gutter-width: 48px;
+
+$font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-size-base: .875rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+$h1-font-size: $font-size-base * 1.5;
+$h2-font-size: $font-size-base;
+
+
+$headings-margin-bottom: 0;
+$headings-font-weight: $font-weight-normal;
+$headings-color: $gray-600;
+
+$text-muted: $gray-500;
+
+$table-accent-bg: $gray-100;
+$table-hover-bg: $gray-200;
+$table-border-color: $gray-300;
+$table-head-bg: $gray-300;
+$table-head-color: $gray-700;
+
+$btn-line-height: 2.1;
+
+$input-padding-y: .313rem;
+$input-color: $gray-600;
+$input-border-color: $gray-200;
+$input-border-width: 2px;
+$input-placeholder-color: $gray-400;
+$input-height: 38px;
+
+$custom-select-border-width: 2px;
+
+$dropdown-link-color: $gray-600;
+$dropdown-link-hover-color: $primary;
+
+$zindex-modal-backdrop: 1050;
+
+$navbar-padding-x: 24px;
+
+$modal-header-border-width: 0;
+$modal-footer-border-width: 0;
+$modal-xl: 1200px;
+
+$list-group-border-width: 0;
+$list-group-item-padding-x: 1.5rem;
+$list-group-action-color: $gray-500;
+$list-group-active-color: $primary;
+$list-group-action-hover-color: $primary;
+$list-group-active-bg: inherided;
+
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding: .75rem;
+$breadcrumb-bg: unset;
+$breadcrumb-divider: "/";
+
+$custom-control-indicator-size: 1.3rem !default;

@@ -1,0 +1,67 @@
+@import 'vars';
+
+.input-group.input-group-search {
+  .form-control {
+    padding-right: 64px;
+    min-width: 20rem;
+    border-radius: $input-border-radius;
+  }
+
+  .input-group-append {
+    margin-left: -48px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    height: 34px;
+    z-index: 3;
+
+    .btn {
+      padding: 5px 10px;
+      color: $gray-600;
+
+      @include hover {
+        color: darken($gray-600, 10%);
+      }
+    }
+  }
+}
+
+.input-group.input-group-search-advanced {
+  .form-control {
+    padding-right: 64px;
+    min-width: 20rem;
+    border-radius: $input-border-radius;
+  }
+
+  .input-group-append {
+    margin-left: -96px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 2px;
+    height: 34px;
+    z-index: 3;
+
+    .btn {
+      padding: 5px 10px;
+      color: $gray-600;
+
+      @include hover {
+        color: darken($gray-600, 10%);
+      }
+    }
+  }
+}
+
+.input-group.input-group-select {
+  input[readonly] {
+    background-color: $white;
+  }
+
+  .input-group-append {
+    height: 38px;
+
+    .btn-outline-dark {
+      border: 2px solid $gray-200;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+h2 {
+  color: $primary;
+  font-weight: $font-weight-semi-bold;
+  text-transform: uppercase;
+}
+
+dl {
+  margin-bottom: 2.5rem;
+
+  dt {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  dd {
+    min-height: 1.3125rem;
+    margin-bottom: 0;
+    white-space: pre-line;
+  }
+}

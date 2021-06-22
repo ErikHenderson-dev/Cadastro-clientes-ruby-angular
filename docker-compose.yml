@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: backend-tria-teste
+    user: dev:dev
+    stdin_open: true
+    tty: true
+    ports:
+      - 3000:3000
+    volumes:
+      - ./backend/:/app
+      - gems:/.gems
+    environment:
+      - BASE_HREF=/api
+    # env_file:
+    #   - ./backend/.env
+  
+volumes:
+  gems:

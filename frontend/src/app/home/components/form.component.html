@@ -1,0 +1,76 @@
+<app-menu-component></app-menu-component>
+<app-page-block>
+  <h6>{{title}}</h6>
+</app-page-block>
+<div class="container">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group col-2">
+        <label for="numero">Número</label>
+        <input type="text" formControlName="numero" class="form-control" name="numero">
+      </div>
+
+      <div class="form-group col-2">
+        <label for="dtpedido">Data do pedido</label>
+        <input type="date" formControlName="datapedido" max="9999-12-31" class="form-control" name="datapedido">
+        <div *ngIf="submitted && form.datapedido.errors" class="invalid-feedback d-block">
+					<div *ngIf="form.datapedido.errors.required">data é obrigatório.</div>
+				</div>
+      </div>
+      <div class="form-group col-8">
+        <label for="nome">Nome</label>
+        <input type="text" formControlName="nome" class="form-control" name="nome">
+        <div *ngIf="submitted && form.nome.errors" class="invalid-feedback d-block">
+					<div *ngIf="form.nome.errors.required">nome é obrigatório.</div>
+				</div>
+      </div>
+
+      <div class="form-group col-6">
+        <label for="telefone">Telefone</label>
+        <input type="text" formControlName="telefone" class="form-control" name="telefone">
+        <div *ngIf="submitted && form.telefone.errors" class="invalid-feedback d-block">
+					<div *ngIf="form.telefone.errors.required">telefone é obrigatório.</div>
+				</div>
+      </div>
+
+      <div class="form-group col-6">
+        <label for="email">e-mail</label>
+        <input type="e-mail" formControlName="email" class="form-control" name="email">
+        <div *ngIf="submitted && form.email.errors" class="invalid-feedback d-block">
+					<div *ngIf="form.email.errors.required">e-mail é obrigatório.</div>
+				</div>
+      </div>
+
+      <div class="form-group col-12">
+        <label for="empresa">Empresa</label>
+        <input type="text" formControlName="empresa" class="form-control" name="empresa">
+        <div *ngIf="submitted && form.empresa.errors" class="invalid-feedback d-block">
+					<div *ngIf="form.empresa.errors.required">empresa é obrigatório.</div>
+				</div>
+      </div>
+
+      <div class="form-group col-12">
+        <label for="obs">Observação</label>
+        <textarea type="text" formControlName="obs" class="form-control" name="obs" rows="6"></textarea>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group w-100">
+        <label>Produtos</label>
+        <ng-select  formControlName="produtos" id="produtos" class="input-form"
+          [items]="listaProdutos" bindLabel="descricao" bindValue="idProduto"
+          [multiple]="true">
+        </ng-select>
+        <div *ngIf="submitted && form.produtos.errors" class="invalid-feedback d-block">
+					<div *ngIf="form.produtos.errors.required">Produto é obrigatório.</div>
+				</div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <button type="submit" class="btn btn-primary btn-sized mr-2">Salvar</button>
+      <a (click)="cancelar()" class="btn btn-outline-dark btn-sized">Cancelar</a>
+    </div>
+  </form>
+</div>
